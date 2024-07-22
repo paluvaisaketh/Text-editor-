@@ -1,0 +1,145 @@
+.text-editor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.select-container {
+  display: flex;
+  justify-content: space-between; /* Align items side by side with space between */
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.select-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Add space between items */
+}
+
+.select-item:last-child {
+  margin-right: 0; /* Remove margin for the last item */
+}
+
+.select-item label {
+  font-size: 16px;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.select-item select, .select-item button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.text-area {
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  color: #333;
+}
+
+.text-area:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 20px; /* Add some gap between buttons */
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: white;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
+.button-container button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.italic-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+.italic-label {
+  margin-left: 10px;
+  font-size: 16px;
+}
